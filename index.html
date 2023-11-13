@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="main.js" defer></script>
+    <title>We are the champions</title>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <img src="assets/freddie.svg" alt="logo of app" class="logo-image">
+        <h1 class="main-title">
+          We are the Champions
+        </h1>
+        <select id="select" title="choose your login">
+          <option value="" selected disabled>
+            Choose your login
+          </option>
+        </select>
+        <textarea
+          title="your endorsement"
+          placeholder="Write your endorsement here"
+          id="textarea"
+        ></textarea>
+        <div class="participant-container">
+          <input
+            type="text"
+            class="input-side"
+            id="author"
+            title="author"
+            placeholder="From"
+            disabled
+          >
+          <input
+            type="text"
+            class="input-side"
+            id="recipient"
+            title="recipient"
+            placeholder="To"
+          >
+        </div>
+        <button type="button" id="publish" title="press to publish" disabled>
+          Publish
+        </button>
+        <h2 class="subtitle">
+          - Endorsements -
+        </h2>
+        <ul id="message-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
