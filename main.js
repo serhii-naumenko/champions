@@ -93,7 +93,7 @@ function checkMessageParameters() {
 }
 
 function renderMessage(message) {
-  const {author, recipient, text, created, likeAmount, whoLiked} = message[1]
+  const {author, recipient, text, likeAmount, whoLiked} = message[1]
   const newMessageEl = document.createElement('li')
   newMessageEl.setAttribute('class', 'message-item')
   newMessageEl.innerHTML = `
@@ -107,11 +107,18 @@ function renderMessage(message) {
       <h4 class="message-side">
         From ${author}
       </h4>
-      <p class="like" id="like-${created}">
+      <p
+        class="like"
+        title="${currentAuthor && !whoLiked.includes(currentAuthor)
+          ? "add like"
+          : ""
+        }"
+      >
         <span
           class="${currentAuthor !== author && whoLiked.includes(currentAuthor)
             ? 'like-purple'
-            : 'like-black'}"
+            : 'like-black'
+          }"
         >
           ❤️
         </span> ${likeAmount}
